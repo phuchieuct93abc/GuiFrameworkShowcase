@@ -1,0 +1,4 @@
+BasicComponentData #class
+ch.axonivy.fintech.showcase.BasicComponent #namespace
+basicComponent ch.axonivy.fintech.showcaseProcesses.basicComponent #field
+basicComponent PERSISTENT #fieldModifier
