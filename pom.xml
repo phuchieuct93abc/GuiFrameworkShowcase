@@ -9,8 +9,8 @@
   <dependencies>
     <dependency>
       <groupId>ch.axonivy.fintech</groupId>
-      <artifactId>standard</artifactId>
-      <version>[0.00.87.00-SNAPSHOT,)</version>
+      <artifactId>basic_component</artifactId>
+      <version>[0.00.88.00-SNAPSHOT,)</version>
       <type>iar</type>
     </dependency>
   </dependencies>

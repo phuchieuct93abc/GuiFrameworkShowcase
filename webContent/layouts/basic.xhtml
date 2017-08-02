@@ -14,14 +14,29 @@
 	<h:outputStylesheet name="layouts/styles/bootstrap-modified-for-jsf.css" />
 	<h:outputStylesheet name="layouts/styles/bootstrap-reset.css" />
 	<h:outputStylesheet name="layouts/styles/ivy-common-6.css" />
-	<h:outputStylesheet name="layouts/styles/style.css" />
 	<h:outputScript library="ivy-webcontent" name="/resources/util/lodash.min.js" />
 	<h:outputScript library="ivy-webcontent" name="/resources/js/fintechHandlingComponent.js?v=#{cachedVersionResolver.version}"/>
+	<h:outputStylesheet library="primefaces-extensions" name="codemirror/mode/tiki.css" />
+	 <h:outputScript library="ivy-webcontent" name="/resources/util/jquery-ui-autocomplete.js?v=#{cachedVersionResolver.version}" /> 
+	 
+	 
+				<h:outputScript library="ivy-webcontent" name="/layouts/highlighter/shCore.js" />
+	
+				<h:outputScript library="ivy-webcontent" name="/layouts/highlighter/shBrushXml.js" />
+				<h:outputScript library="ivy-webcontent" name="/layouts/highlighter/shBrushJava.js" />
+	
+		<h:outputStylesheet name="layouts/highlighter/shCore.css" />
+		<h:outputStylesheet name="layouts/highlighter/shThemeDefault.css" />
+	
+	
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.js"></script>
   <![endif]-->
+  <style>
+  .CodeMirror-scroll{height:auto}
+  </style>
 </h:head>
 <h:body>
 	<div class="navbar navbar-top">
@@ -65,5 +80,6 @@
 			</footer>
 		</ui:insert>
 	</div>
+	
 </h:body>
 </html>

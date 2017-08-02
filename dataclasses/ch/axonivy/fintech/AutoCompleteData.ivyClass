@@ -1,0 +1,4 @@
+AutoCompleteData #class
+ch.axonivy.fintech #namespace
+nationality String #field
+nationality PERSISTENT #fieldModifier

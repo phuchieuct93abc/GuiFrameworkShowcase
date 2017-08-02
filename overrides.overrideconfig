@@ -1,1 +1,6 @@
-*
+{
+  /PROCESS {
+    /Functional-Processes.dis.WebIDDataservice "Functional Processes/dis/WebIDDataserviceOverride"
+  }
+  /RICH_DIALOG *
+}

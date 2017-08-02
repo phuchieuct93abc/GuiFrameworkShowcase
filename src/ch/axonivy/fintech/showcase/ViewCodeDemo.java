@@ -9,8 +9,8 @@ public class ViewCodeDemo extends CodeDemo {
 	private static final String PATTERN_REGEX = "<h:form id=\"form\">(.*)</h:form>";
 	private static final Pattern pattern = Pattern.compile(PATTERN_REGEX, Pattern.DOTALL);
 
-	public ViewCodeDemo(String fileName, String filePath) {
-		super(fileName, filePath);
+	public ViewCodeDemo(String fileName, String filePath,String fileType) {
+		super(fileName, filePath,fileType);
 	}
 
 	@Override

@@ -10,9 +10,15 @@ public class CodeDemo {
 	private String content;
 	private String filePath;
 
-	public CodeDemo(String fileName, String filePath) {
+	private String fileType;
+	public String getFileType() {
+		return fileType;
+	}
+
+	public CodeDemo(String fileName, String filePath,String fileType) {
 		this.fileName = fileName;
 		this.filePath = filePath;
+		this.fileType = fileType;
 	}
 
 	public String getFileName() {
