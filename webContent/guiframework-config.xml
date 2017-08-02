@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config>
+	<rendering>
+		<isMarkRequiredField>true</isMarkRequiredField>
+	</rendering>
+	<debugger>
+		<showingRuleKeyOnView>true</showingRuleKeyOnView>
+	</debugger>
+	
+</config>

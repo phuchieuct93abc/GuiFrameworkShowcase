@@ -1,0 +1,69 @@
+import ch.axonivy.fintech.standard.guiframework.BaseMetaDto;
+import java.util.Date;
+import java.util.Calendar;
+
+rule "[guiFramework-Showcase] Mandatory "
+when
+    $mandatory : BaseMetaDto( propertyName == "ContextBasedRules.sob.mandatory")
+then
+	$mandatory.setRequired(true);
+end
+
+rule "[guiFramework-Showcase] Hidden"
+when
+    $hidden : BaseMetaDto(propertyName == "ContextBasedRules.sob.hidden")
+    BaseMetaDto(propertyName == "ContextBasedRules.sob.isHidden",viewValue == true)    
+then
+	$hidden.setRendered(false);
+end
+
+rule "[guiFramework-Showcase] Unhidden"
+when
+    $hidden : BaseMetaDto(propertyName == "ContextBasedRules.sob.hidden")
+    BaseMetaDto(propertyName == "ContextBasedRules.sob.isHidden",viewValue == false)    
+then
+	$hidden.setRendered(true);
+end
+
+
+rule "[guiFramework-Showcase] Custom message"
+when
+    $customMessage : BaseMetaDto(propertyName == "ContextBasedRules.sob.customMessage",viewValue=="axon")    
+then
+	$customMessage.setValid(false);
+	$customMessage.setMessage("Custome message");
+end
+
+rule "[guiFramework-Showcase] Calendar range"
+when
+    $customMessage : BaseMetaDto(propertyName == "ContextBasedRules.sob.calendar")    
+then
+	$customMessage.setMinDate(new Date(System.currentTimeMillis() - 1000L * 60L * 60L * 24L));
+	$customMessage.setMaxDate(new Date(System.currentTimeMillis() + 1000L * 60L * 60L * 24L));	
+end
+
+rule "[guiFramework-Showcase] Max length"
+when
+    $maxLength : BaseMetaDto(propertyName == "ContextBasedRules.sob.maxLength")    
+then
+	$maxLength.setMaxLength(5);
+	
+end
+
+rule "[guiFramework-Showcase] Read only"
+when
+    $maxLength : BaseMetaDto(propertyName == "ContextBasedRules.sob.readOnly")    
+then
+	$maxLength.setReadonly(true);
+	
+end
+
+
+rule "[guiFramework-Showcase] Min max value"
+when
+    $minMaxValue : BaseMetaDto(propertyName == "ContextBasedRules.sob.minMaxValue")    
+then
+	$minMaxValue.setMin(0);
+	$minMaxValue.setMax(10);
+	
+end

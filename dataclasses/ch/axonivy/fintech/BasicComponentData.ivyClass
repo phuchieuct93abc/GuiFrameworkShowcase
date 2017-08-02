@@ -1,0 +1,18 @@
+BasicComponentData #class
+ch.axonivy.fintech #namespace
+mandatory String #field
+mandatory PERSISTENT #fieldModifier
+hidden String #field
+hidden PERSISTENT #fieldModifier
+isHidden Boolean #field
+isHidden PERSISTENT #fieldModifier
+customMessage String #field
+customMessage PERSISTENT #fieldModifier
+calendar java.util.Date #field
+calendar PERSISTENT #fieldModifier
+maxLength String #field
+maxLength PERSISTENT #fieldModifier
+readOnly String #field
+readOnly PERSISTENT #fieldModifier
+minMaxValue Integer #field
+minMaxValue PERSISTENT #fieldModifier

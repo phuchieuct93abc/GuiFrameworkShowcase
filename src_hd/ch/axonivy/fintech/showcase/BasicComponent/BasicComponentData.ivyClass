@@ -1,4 +1,6 @@
 BasicComponentData #class
 ch.axonivy.fintech.showcase.BasicComponent #namespace
-basicComponent ch.axonivy.fintech.showcaseProcesses.basicComponent #field
-basicComponent PERSISTENT #fieldModifier
+dossier ch.axonivy.fintech.BasicComponentData #field
+dossier PERSISTENT #fieldModifier
+codes java.util.List<ch.axonivy.fintech.showcase.CodeDemo> #field
+codes PERSISTENT #fieldModifier

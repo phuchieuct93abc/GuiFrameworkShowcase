@@ -5,17 +5,53 @@
 	xmlns:ic="http://ivyteam.ch/jsf/component"
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:pe="http://primefaces.org/ui/extensions"
-	xmlns:pm="http://primefaces.org/mobile">
+	xmlns:pm="http://primefaces.org/mobile"
+	xmlns:gui="http://axonivy.com/gui/components">
 <h:body>
 	<ui:composition template="/layouts/basic.xhtml">
+
 		<ui:define name="desciption">
 			This section demos how gui framework works with basic component: p:input, p:selectBox,p:calendar			
 		</ui:define>
+
 		<ui:define name="liveDemo">
-			demo	
+			<h:form id="form">
+				<gui:eventListeners rulesPackage="sob" dataModel="#{data.dossier}"
+					dialogData="#{data}" />
+				<p:panelGrid columns="2" cellpadding="10">
+					<p:outputLabel value="Mandatory" for="mandatory" />
+					<p:inputText id="mandatory" value="#{data.dossier.mandatory}" />
+
+					<p:outputLabel value="Hidden" for="hidden" />
+					<p:outputPanel>
+						<p:inputText id="hidden" value="#{data.dossier.hidden}" />
+						<p:selectBooleanCheckbox value="#{data.dossier.isHidden}" itemLabel="Hide" />
+					</p:outputPanel>
+					
+					<p:outputLabel value="CustomMessage (value=axon)" for="customMessage" />
+					<p:inputText id="customMessage" value="#{data.dossier.customMessage}" />
+					
+					<p:outputLabel value="Calendar (between yesterday and tomorrow)" for="calendar" />
+					<p:calendar value="#{data.dossier.calendar}" id="calendar"></p:calendar>
+					
+					<p:outputLabel value="Maxlength:5" for="maxLength" />
+					<p:inputText value="#{data.dossier.maxLength}" id="maxLength"/>
+					
+					<p:outputLabel value="Read only" for="readOnly" />
+					<p:inputText value="#{data.dossier.readOnly}" id="readOnly"/>
+					
+					<p:outputLabel value="Min max value " for="minMaxValue" />
+					<p:inputText type="number" value="#{data.dossier.minMaxValue}" id="minMaxValue"/>
+				</p:panelGrid>
+			</h:form>
 		</ui:define>
+
 		<ui:define name="code">
-			code	
+			<p:tabView value="#{data.codes}" var="code">
+				<p:tab title="#{code.fileName}">
+					<pre>#{code.content}</pre>
+				</p:tab>
+			</p:tabView>
 		</ui:define>
 	</ui:composition>
 </h:body>
