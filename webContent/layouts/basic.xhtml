@@ -17,16 +17,16 @@
 	<h:outputScript library="ivy-webcontent" name="/resources/util/lodash.min.js" />
 	<h:outputScript library="ivy-webcontent" name="/resources/js/fintechHandlingComponent.js?v=#{cachedVersionResolver.version}"/>
 	<h:outputStylesheet library="primefaces-extensions" name="codemirror/mode/tiki.css" />
-	 <h:outputScript library="ivy-webcontent" name="/resources/util/jquery-ui-autocomplete.js?v=#{cachedVersionResolver.version}" /> 
+	<h:outputScript library="ivy-webcontent" name="/resources/util/jquery-ui-autocomplete.js?v=#{cachedVersionResolver.version}" /> 
 	 
 	 
-				<h:outputScript library="ivy-webcontent" name="/layouts/highlighter/shCore.js" />
+	<h:outputScript library="ivy-webcontent" name="/layouts/highlighter/shCore.js" />
 	
-				<h:outputScript library="ivy-webcontent" name="/layouts/highlighter/shBrushXml.js" />
-				<h:outputScript library="ivy-webcontent" name="/layouts/highlighter/shBrushJava.js" />
+	<h:outputScript library="ivy-webcontent" name="/layouts/highlighter/shBrushXml.js" />
+	<h:outputScript library="ivy-webcontent" name="/layouts/highlighter/shBrushJava.js" />
 	
-		<h:outputStylesheet name="layouts/highlighter/shCore.css" />
-		<h:outputStylesheet name="layouts/highlighter/shThemeDefault.css" />
+	<h:outputStylesheet name="layouts/highlighter/shCore.css" />
+	<h:outputStylesheet name="layouts/highlighter/shThemeDefault.css" />
 	
 	
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -80,6 +80,12 @@
 			</footer>
 		</ui:insert>
 	</div>
-	
+		<script type="text/javascript">
+			$(function(){
+					SyntaxHighlighter.all()
+		
+		
+		})()
+		</script>
 </h:body>
 </html>

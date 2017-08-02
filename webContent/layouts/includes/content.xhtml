@@ -15,14 +15,13 @@
 		<ui:insert name="liveDemo" />
 
 		<h2>Code</h2>
-		<ui:insert name="code" />
-		<script type="text/javascript">
-		$(function(){
-					SyntaxHighlighter.all()
-		
-		
-		})()
-		</script>
+			<p:tabView value="#{data.codes}" var="code">
+				<p:tab title="#{code.fileName}">
+						<pre class="brush: #{code.fileType}">#{code.content}</pre> 
+					
+				</p:tab>
+			</p:tabView>
+
 	</ui:composition>
 </body>
 </html>

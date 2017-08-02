@@ -4,5 +4,3 @@ dossier ch.axonivy.fintech.BasicComponentData #field
 dossier PERSISTENT #fieldModifier
 codes java.util.List<ch.axonivy.fintech.showcase.CodeDemo> #field
 codes PERSISTENT #fieldModifier
-ranger String #field
-ranger PERSISTENT #fieldModifier

@@ -14,6 +14,7 @@ public class CodeDemoFactory {
 		switch (type) {
 
 		case JAVA:
+		case RULE:
 			return new CodeDemo(fileName, path, fileType);
 
 		case XML:

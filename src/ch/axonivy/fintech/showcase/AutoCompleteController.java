@@ -16,6 +16,8 @@ import ch.ivyteam.ivy.environment.Ivy;
 import ch.ivyteam.ivy.scripting.objects.CompositeObject;
 
 public class AutoCompleteController extends BaseGuiFrameworkController {
+	private static final String COUNTRIES_SUFFIX = "_countries";
+
 	public AutoCompleteController(GuiFrameworkControllerConfig config) {
 		super(config);
 	}
@@ -24,16 +26,14 @@ public class AutoCompleteController extends BaseGuiFrameworkController {
 	public void doPostAddToViewEvent(ComponentSystemEvent event, CompositeObject object) throws GuiFrameworkException {
 
 		super.doPostAddToViewEvent(event, object);
-		
 		AutoCompleteData viewModel = this.getViewModel(AutoCompleteData.class);
 		List<CountryDto> countrylist = CountryUtility.getSortedByNameCountries(Ivy.session().getContentLocale());
-
 		String key = GuiFrameworkUtil.getAutocompleteBean().getEffectiveComponentClass(viewModel);
-		String countriesKey = key + "_countries";
+		String countriesKey = key + COUNTRIES_SUFFIX;
 		AutocompleteUtil.initAutocompleteSource(countrylist, countriesKey);
 	}
 
-	public static AutoCompleteController getInstance(GuiFrameworkControllerConfig config) {
+	public static AutoCompleteController createInstance(GuiFrameworkControllerConfig config) {
 		return new AutoCompleteController(config);
 	}
 

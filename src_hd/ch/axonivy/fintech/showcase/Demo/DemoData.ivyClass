@@ -1,4 +1,0 @@
-DemoData #class
-ch.axonivy.fintech.showcase.Demo #namespace
-data String #field
-data PERSISTENT #fieldModifier

@@ -27,21 +27,14 @@
 					</p:inputText>
 					<p:outputPanel autoUpdate="true">
 						Selected country:
-						<p:outputLabel value="1212" />
+						<p:outputLabel value="#{data.dossier.nationality}" />
 					</p:outputPanel>
 
 				</p:panelGrid>
 			</h:form>
 		</ui:define>
 
-		<ui:define name="code">
-			<p:tabView value="#{data.codes}" var="code">
-				<p:tab title="#{code.fileName}">
-						<pre class="brush: #{code.fileType}">#{code.content}</pre> 
-					
-				</p:tab>
-			</p:tabView>
-		</ui:define>
+		
 
 	</ui:composition>
 </h:body>

@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Wed Aug 02 17:18:01 ICT 2017]
+[>Created: Wed Aug 02 17:36:42 ICT 2017]
 15D7DC0403CA44B1 3.18 #module
 >Proto >Proto Collection #zClass
 Bs0 BasicComponentProcess Big #zClass
@@ -69,6 +69,7 @@ ResourceLoader loader = new ResourceLoader();
 in.codes = new ArrayList();
 
 in.codes.add(CodeDemoFactory.createCodeDemo(CodeDemoFactory.RULE,"Rule","rules/ContextBasedRules/sob/default.drl"));
+
 in.codes.add(CodeDemoFactory.createCodeDemo(CodeDemoFactory.XML,"View","src_hd/ch/axonivy/fintech/showcase/BasicComponent/BasicComponent.xhtml"));
 
 
