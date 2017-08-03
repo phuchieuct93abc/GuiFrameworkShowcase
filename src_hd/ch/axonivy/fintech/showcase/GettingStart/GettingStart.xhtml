@@ -16,20 +16,10 @@
 		</ui:define>
 
 		<ui:define name="liveDemo">
-<h:form id="form">
-	<gui:eventListeners rulesPackage="sob" dataModel="#{data.dossier}"	dialogData="#{data}" />
-	<p:panelGrid columns="2" cellpadding="10">
-		<p:inputText id="personNationality" type="autocomplete"
-			value="#{data.dossier.nationality}"
-			pt:source-autocomplete="#{autocompleteBean.getEffectiveComponentClass(data)}_countries"
-			pt:source-autocomplete-type="AutocompleteItem">
-		</p:inputText>
-		<p:outputPanel autoUpdate="true">
-			Selected country:
-			<p:outputLabel value="#{data.dossier.nationality}" /> 
-		</p:outputPanel>		
-	</p:panelGrid>
-</h:form>
+			<h:form id="form">
+				<gui:eventListeners rulesPackage="sob" dataModel="#{data.dossier}" dialogData="#{data}" />
+
+			</h:form>
 		</ui:define>
 
 

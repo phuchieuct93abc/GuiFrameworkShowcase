@@ -15,38 +15,35 @@
 		</ui:define>
 
 		<ui:define name="liveDemo">
-			<h:form id="form">
-				<gui:eventListeners rulesPackage="sob" dataModel="#{data.dossier}"
-					dialogData="#{data}" />
-				<p:panelGrid columns="2" cellpadding="10">
-					<p:outputLabel value="Mandatory" for="mandatory" />
-					<p:inputText id="mandatory" value="#{data.dossier.mandatory}" />
+<h:form id="form">
+	<gui:eventListeners rulesPackage="sob" dataModel="#{data.dossier}"	dialogData="#{data}" />
+	<p:panelGrid columns="2" cellpadding="10">
+		<p:outputLabel value="Mandatory" for="mandatory" />
+		<p:inputText id="mandatory" value="#{data.dossier.mandatory}" />
 
-					<p:outputLabel value="Hidden" for="hidden" />
-					<p:outputPanel>
-						<p:inputText id="hidden" value="#{data.dossier.hidden}" />
-						<p:selectBooleanCheckbox value="#{data.dossier.isHidden}" itemLabel="Hide" />
-					</p:outputPanel>
-					
-					<p:outputLabel value="CustomMessage (value=axon)" for="customMessage" />
-					<p:inputText id="customMessage" value="#{data.dossier.customMessage}" />
-					
-					<p:outputLabel value="Calendar (between yesterday and tomorrow)" for="calendar" />
-					<p:calendar value="#{data.dossier.calendar}" id="calendar"></p:calendar>
-					
-					<p:outputLabel value="Maxlength:5" for="maxLength" />
-					<p:inputText value="#{data.dossier.maxLength}" id="maxLength"/>
-					
-					<p:outputLabel value="Read only" for="readOnly" />
-					<p:inputText value="#{data.dossier.readOnly}" id="readOnly"/>
-					
-					<p:outputLabel value="Min max value " for="minMaxValue" />
-					<p:inputText type="number" value="#{data.dossier.minMaxValue}" id="minMaxValue"/>
-				</p:panelGrid>
-			</h:form>
-		</ui:define>
-
-	
+		<p:outputLabel value="Hidden" for="hidden" />
+		<p:outputPanel>
+			<p:inputText id="hidden" value="#{data.dossier.hidden}" />
+			<p:selectBooleanCheckbox value="#{data.dossier.isHidden}" itemLabel="Hide" />
+		</p:outputPanel>
+		
+		<p:outputLabel value="CustomMessage (value=axon)" for="customMessage" />
+		<p:inputText id="customMessage" value="#{data.dossier.customMessage}" />
+		
+		<p:outputLabel value="Calendar (between yesterday and tomorrow)" for="calendar" />
+		<p:calendar value="#{data.dossier.calendar}" id="calendar"></p:calendar>
+		
+		<p:outputLabel value="Maxlength:5" for="maxLength" />
+		<p:inputText value="#{data.dossier.maxLength}" id="maxLength"/>
+		
+		<p:outputLabel value="Read only" for="readOnly" />
+		<p:inputText value="#{data.dossier.readOnly}" id="readOnly"/>
+		
+		<p:outputLabel value="Min max value " for="minMaxValue" />
+		<p:inputText type="number" value="#{data.dossier.minMaxValue}" id="minMaxValue"/>
+	</p:panelGrid>
+</h:form>
+		</ui:define>	
 	</ui:composition>
 </h:body>
 </html>
