@@ -1,0 +1,11 @@
+import ch.axonivy.fintech.standard.guiframework.BaseMetaDto;
+
+rule "[guiFramework-Showcase] Mandatory "
+when
+    $mandatory : BaseMetaDto( propertyName == "ContextBasedRules.validateButton.mandatory")
+    $maxLength : BaseMetaDto( propertyName == "ContextBasedRules.validateButton.maxLength")
+then
+	$mandatory.setRequired(true);
+	$maxLength.setMaxLength(3);
+	
+end

@@ -1,0 +1,6 @@
+CustomControllerData #class
+ch.axonivy.fintech.usecase.CustomController #namespace
+dossier ch.axonivy.fintech.BasicComponentData #field
+dossier PERSISTENT #fieldModifier
+codes java.util.List<ch.axonivy.fintech.showcase.CodeDemo> #field
+codes PERSISTENT #fieldModifier

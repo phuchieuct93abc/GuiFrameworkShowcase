@@ -1,0 +1,103 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:ic="http://ivyteam.ch/jsf/component"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+	xmlns:pm="http://primefaces.org/mobile"
+	xmlns:gui="http://axonivy.com/gui/components"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	 xmlns:v="http://java.sun.com/jsf/composite/guiframework-components">
+<h:body>
+	<ui:composition template="/layouts/basic.xhtml">
+
+		<ui:define name="desciption">
+		customer controller
+<p>
+<h3>
+As the validation is triggered only for the active field now, we create two new components to trigger the validation for either the whole form or the currently active tab.
+</h3>
+First off make sure to add the xmlns declartion:
+<pre class="brush: xml">
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;
+      [...]
+      xmlns:v=&quot;http://java.sun.com/jsf/composite/guiframework-components&quot; /&gt;
+
+</pre>
+Then to validate to whole form add the following component anywhere <b>inside the form</b>:
+<pre  class="brush: xml">
+&lt;h:form id=&quot;form&quot;&gt;
+    &lt;gui:eventListeners rulesPackage=&quot;demo&quot; dataModel=&quot;\#{data.model}&quot; dialogData=&quot;\#{data}&quot; /&gt;
+ 
+    [...]
+ 
+    &lt;v:validateAllButton rulesPackage=&quot;dg&quot; value=&quot;Validate&quot; styleClass=&quot;validation-button&quot; /&gt;
+</pre>
+<p class="bg-info">Note that the <b>rulesPackage</b> parameter is required and should match the <b>gui:eventListeners</b> components parameter value. Make sure that the button is after the top most <b>gui:eventListeners</b> component. </p>
+<p class="bg-danger">For example the following would not work:</p>
+	<pre class="brush: xml ">
+	
+	&lt;h:form id=&quot;form&quot;&gt;
+	    &lt;v:validateAllButton rulesPackage=&quot;dg&quot; value=&quot;Validate&quot; styleClass=&quot;validation-button&quot; /&gt;
+	    &lt;gui:eventListeners rulesPackage=&quot;demo&quot; dataModel=&quot;\#{data.model}&quot; dialogData=&quot;\#{data}&quot; /&gt;
+	</pre>
+To validate the currently active tab add the following component anywhere in your form:
+<pre class="brush: xml">
+&lt;h:form id=&quot;form&quot;&gt;
+ 
+    [...]
+ 
+    &lt;v:validateTabButton tabViewId=&quot;demoTabView&quot; /&gt;</pre>
+
+
+For this component the tabViewId parameter is requred.
+You can also configure the styleClass, value etc. of the buttons. Just check their .xhtml source.
+Open Issues
+<ul>
+<li>The performance was not that great. At least on my computer. We'll work on improvements in the future</li>
+<li>The required library is kinda annoying. Not sure if we can prevent that tough...</li>
+</ul>
+
+
+Appendix
+Gui Level : all components (ivy components) have hierarchy basing on how they are using in gui:
+<ul>
+<li>root component: contain all other components and not wrapped by other component, normally it is a main page of module</li>
+<li>mediate/middle component: embedded inside other component (or page) and contain some other components</li>
+<li>leaf component: not contain any child components.</li>
+</ul>  
+If you have any questions, improvement proposals or other ideas don't hesitate to contact me (me = Lars).
+
+</p>
+
+
+
+		</ui:define>
+
+
+		<ui:define name="liveDemo">
+    <h:form id="form">
+    <gui:eventListeners rulesPackage="validateButton" dataModel="#{data.data}" dialogData="#{data}" />
+
+   <p:tabView id="demoTabView" widgetVar="demoTabView">
+   
+   		<p:tab title="Tab 1">
+            <p:outputLabel value="Required" for="tab1-required"></p:outputLabel>
+  			<p:inputText id="tab1-required" value="#{data.data.mandatory}" />  	
+        </p:tab>
+        
+        <p:tab title="Tab 2">        
+	        <p:outputLabel value="Required" for="tab2-maxLength"></p:outputLabel>
+	  		<p:inputText id="tab2-maxLength" value="#{data.data.maxLength}" />  	
+        </p:tab>
+               
+    </p:tabView>
+
+    <v:validateAllButton rulesPackage="validateButton" value="Validate" styleClass="validation-button"  tabViewId="demoTabView"/>
+</h:form>
+		</ui:define>
+
+	</ui:composition>
+</h:body>
+</html>

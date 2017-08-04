@@ -27,6 +27,7 @@
 	
 	<h:outputStylesheet name="layouts/highlighter/shCore.css" />
 	<h:outputStylesheet name="layouts/highlighter/shThemeDefault.css" />
+		<h:outputStylesheet name="layouts/styles/styles.css" />
 	
 	
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -37,9 +38,6 @@
 
 </h:head>
 <h:body>
-
-
-
 	<div class="navbar navbar-top">
 		<div class="container" id="headerdiv">
 
@@ -60,14 +58,14 @@
 		</div>
 	</div>
 
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 hd-demo-nav">
+	<div class="container-fluid">
+		<div class="row flex">
+			<div class="left-layout hd-demo-nav">
 				<ui:insert name="menu">
 					<ui:include src="/layouts/includes/menu.xhtml" />
 				</ui:insert>
 			</div>
-			<div class="col-lg-10 col-md-10 col-sm-9 col-xs-9">
+			<div class="right-layout">
 				<ui:decorate template="/layouts/includes/content.xhtml" />
 				
 				
@@ -83,10 +81,8 @@
 	</div>
 		<script type="text/javascript">
 			$(function(){
-					SyntaxHighlighter.all()
-		
-		
-		})()
+					SyntaxHighlighter.all()		
+			})
 		</script>
 </h:body>
 </html>

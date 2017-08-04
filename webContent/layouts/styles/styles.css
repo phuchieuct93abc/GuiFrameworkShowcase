@@ -1,0 +1,28 @@
+p{
+	white-space: pre-wrap;	
+	font-size:1.2em
+}
+p[class^=bg-]{
+	
+	padding:15px;
+	
+}
+.syntaxhighlighter .toolbar{
+	display: none;
+}
+.getting-start{
+		font-size:16px;
+	
+}
+.left-layout{
+	    width: 250px;
+}
+.right-layout{
+	flex:1
+}
+.flex{
+	display: flex;
+}
+.syntaxhighlighter {
+	overflow: visible !important;
+}

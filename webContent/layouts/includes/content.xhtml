@@ -14,13 +14,15 @@
 		<h2>Live demo</h2>
 		<ui:insert name="liveDemo" />
 
+
 		<h2>Code</h2>
-			<p:tabView value="#{data.codes}" var="code">
+			<p:tabView value="#{data.codes}" var="code" rendered="#{data.codes.size() >=1}">
 				<p:tab title="#{code.fileName}">
 						<pre class="brush: #{code.fileType}">#{code.content}</pre> 
 					
 				</p:tab>
 			</p:tabView>
+			
 
 	</ui:composition>
 </body>

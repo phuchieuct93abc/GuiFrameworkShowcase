@@ -1,0 +1,72 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:ic="http://ivyteam.ch/jsf/component"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+	xmlns:pm="http://primefaces.org/mobile"
+	xmlns:gui="http://axonivy.com/gui/components"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+<h:body>
+	<ui:composition template="/layouts/basic.xhtml">
+
+		<ui:define name="desciption">
+		customer controller
+<p>
+
+Additionally for a component you may have a custom controller implementation. This way you can for example override the behaviour for the preRendered view event or whatver.
+The custom controller must fulfil the follwoing requirements:
+<ol>
+<li>The controller must extend the ch.axonivy.fintech.standard.guiframework.core.BaseGuiFrameworkController class.</li>
+<li>By default, the name and package of the class must exactly the same as the name and package of the dialog with the prefix "Controller" for the class name. So for example: The controller for a component in the package ch.axonivy.example.dialogs with the name ExampleDialog  would be named ExampleDialogController and also be in the package ch.axonivy.example.dialogs. In case you don't want to follow this convention, can read this post (Section 2.1. Components)</li>
+<li>The class must have a public static method named getInstance that takes a ch.axonivy.fintech.standard.guiframework.core.GuiFrameworkControllerConfig as parameter and returns an instance of the controller. 
+</li>
+
+</ol>
+
+
+An example controller is shown below
+ <pre class="brush: java">
+package ch.axonivy.example.dialogs; // same package as the dialog
+ 
+// imports
+
+ public class ExampleDialogController // name of the dialog + "Controller" postfix
+        extends BaseGuiFrameworkController { // must extend base class
+     
+    public static ExampleDialogController
+                createInstance(GuiFrameworkControllerConfig config) { // default factory method
+        return new ExampleDialogController(config);
+    }
+ 
+[...]
+ </pre>
+<p class="bg-info">Creating a custom controller is not required. You have to create a custom controller only in case the default behaviour of the controller has to be changed. In almost all cases just using the jsf component is enough.
+</p>
+
+
+</p>
+		</ui:define>
+<ui:define name="liveDemo">
+<h:form id="form">
+	<gui:eventListeners rulesPackage="customController"
+		dataModel="#{data.dossier}" dialogData="#{data}" />
+	<p:outputLabel value="Play with below input" for="tab2-maxLength"></p:outputLabel>
+	<p:inputText id="tab2-maxLength" value="#{data.dossier.maxLength}" />
+
+
+	<p:growl id="growl" sticky="false" life="2000" showDetail="true"
+		autoUpdate="true" redisplay="false" />
+
+</h:form>
+		</ui:define>
+
+
+
+
+
+
+	</ui:composition>
+</h:body>
+</html>

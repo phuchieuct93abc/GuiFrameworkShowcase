@@ -5,6 +5,9 @@ public class CodeDemoFactory {
 	public static final String RULE = "rule";
 	public static final String XML = "xml";
 
+	private CodeDemoFactory() {
+	}
+
 	public static CodeDemo createCodeDemo(String type, String fileName, String path) {
 		String fileType = type;
 
@@ -12,7 +15,6 @@ public class CodeDemoFactory {
 			fileType = JAVA;
 		}
 		switch (type) {
-
 		case JAVA:
 		case RULE:
 			return new CodeDemo(fileName, path, fileType);

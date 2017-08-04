@@ -9,13 +9,11 @@
 <body>
 	<ui:composition>
 		<p:menu>
-		
-			<p:submenu label="Getting start">
-				<p:menuitem value="Basic component"
-					url="#{ivy.html.startref('ShowCaseProcesses/BasicComponent/start.ivp')}" />
 
-			</p:submenu>
-		
+			<p:menuitem value="Getting start"
+				url="#{ivy.html.startref('ShowCaseProcesses/GettingStart/start.ivp')}" />
+
+
 			<p:submenu label="Showcases">
 				<p:menuitem value="Basic component"
 					url="#{ivy.html.startref('ShowCaseProcesses/BasicComponent/start.ivp')}" />
@@ -23,7 +21,14 @@
 					url="#{ivy.html.startref('ShowCaseProcesses/AutoComplete/start.ivp')}" />
 			</p:submenu>
 			<p:submenu label="Usecases">
-
+				<p:menuitem value="Custom controller"
+					url="#{ivy.html.startref('ShowCaseProcesses/CustomController/start.ivp')}" /> 
+						<p:menuitem value="Component context"
+					url="#{ivy.html.startref('UseCaseProcesses/ComponentContext/start.ivp')}" /> 
+					
+						<p:menuitem value="Validate button"
+					url="#{ivy.html.startref('UseCaseProcesses/ValidateButton/start.ivp')}" /> 
+					
 
 			</p:submenu>
 

@@ -1,0 +1,6 @@
+ComponentContextData #class
+ch.axonivy.fintech.usecase.ComponentContext #namespace
+dossier ch.axonivy.fintech.AutoCompleteData #field
+dossier PERSISTENT #fieldModifier
+codes java.util.List<ch.axonivy.fintech.showcase.CodeDemo> #field
+codes PERSISTENT #fieldModifier

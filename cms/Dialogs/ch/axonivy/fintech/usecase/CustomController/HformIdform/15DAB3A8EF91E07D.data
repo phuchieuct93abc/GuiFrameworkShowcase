@@ -1,0 +1,1 @@
+<h:form id="form"> <gui:eventListeners rulesPackage="demo" dataModel="#{data.model}" dialogData="#{data}" /> [...] <v:validateAllButton rulesPackage="dg" value="Validate" styleClass="validation-button" />

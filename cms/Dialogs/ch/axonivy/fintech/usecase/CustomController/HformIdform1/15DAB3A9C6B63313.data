@@ -1,0 +1,1 @@
+<h:form id="form"> [...] <v:validateTabButton tabViewId="demoTabView" />

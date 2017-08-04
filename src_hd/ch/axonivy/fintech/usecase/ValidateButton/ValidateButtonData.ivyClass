@@ -1,0 +1,6 @@
+ValidateButtonData #class
+ch.axonivy.fintech.usecase.ValidateButton #namespace
+data ch.axonivy.fintech.BasicComponentData #field
+data PERSISTENT #fieldModifier
+codes java.util.List<ch.axonivy.fintech.showcase.CodeDemo> #field
+codes PERSISTENT #fieldModifier
