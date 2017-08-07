@@ -8,35 +8,40 @@
 	xmlns:pm="http://primefaces.org/mobile">
 <body>
 	<ui:composition>
-	
-	
 
-	
+
+<h:form>
+
 		<p:menu>
 
 			<p:menuitem value="Getting start"
-				url="#{ivy.html.startref('ShowCaseProcesses/GettingStart/start.ivp')}" />
+				styleClass="#{applicationContainer.isActive('GETTING_START') ? 'ui-state-active' : ''}"
+				url="#{applicationContainer.goShowcase('GETTING_START')}" 
+				/>
 
 
-			<p:submenu label="Showcases">
+	 	<p:submenu label="Showcases">
 				<p:menuitem value="Basic component"
-					url="#{ivy.html.startref('ShowCaseProcesses/BasicComponent/start.ivp')}" />
+					styleClass="#{applicationContainer.isActive('BASIC_COMPONENT') ? 'ui-state-active' : ''}"
+					url="#{applicationContainer.goShowcase('BASIC_COMPONENT')}" />
 				<p:menuitem value="Auto complete"
-					url="#{ivy.html.startref('ShowCaseProcesses/AutoComplete/start.ivp')}" />
+					styleClass="#{applicationContainer.isActive('AUTO_COMPLETE') ? 'ui-state-active' : ''}"
+					url="#{applicationContainer.goShowcase('AUTO_COMPLETE')}" />
 			</p:submenu>
 			<p:submenu label="Usecases">
 				<p:menuitem value="Custom controller"
-					url="#{ivy.html.startref('ShowCaseProcesses/CustomController/start.ivp')}" /> 
-						<p:menuitem value="Component context"
-					url="#{ivy.html.startref('UseCaseProcesses/ComponentContext/start.ivp')}" /> 
-					
-						<p:menuitem value="Validate button"
-					url="#{ivy.html.startref('UseCaseProcesses/ValidateButton/start.ivp')}" /> 
-					
+					url="#{ivy.html.startref('ShowCaseProcesses/CustomController/start.ivp')}" />
+				<p:menuitem value="Component context"
+					url="#{ivy.html.startref('UseCaseProcesses/ComponentContext/start.ivp')}" />
 
-			</p:submenu>
+				<p:menuitem value="Validate button"
+					url="#{ivy.html.startref('UseCaseProcesses/ValidateButton/start.ivp')}" />
 
-		</p:menu> 
+
+			</p:submenu>  
+
+		</p:menu>
+		</h:form>
 	</ui:composition>
 </body>
 </html>

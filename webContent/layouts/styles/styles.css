@@ -1,28 +1,41 @@
-p{
-	white-space: pre-wrap;	
-	font-size:1.2em
+p {
+	white-space: pre-wrap;
+	font-size: 1.2em
 }
-p[class^=bg-]{
-	
-	padding:15px;
-	
+
+p[class^=bg-] {
+	padding: 15px;
 }
-.syntaxhighlighter .toolbar{
+
+.syntaxhighlighter .toolbar {
 	display: none;
 }
-.getting-start{
-		font-size:16px;
-	
+
+.getting-start {
+	font-size: 16px;
 }
-.left-layout{
-	    width: 250px;
+
+.left-layout {
+	width: 250px;
 }
-.right-layout{
-	flex:1
+
+.right-layout {
+	flex: 1
 }
-.flex{
+
+.flex {
 	display: flex;
 }
+
 .syntaxhighlighter {
 	overflow: visible !important;
+}
+
+.no-border.ui-panelgrid>*>tr, .no-border.ui-panelgrid>*>tr>td {
+	border: none;
+}
+
+.ui-state-active {
+	background-color: #0081c2 !important;
+	color: white !important;
 }

@@ -17,7 +17,7 @@
 		<ui:define name="liveDemo">
 <h:form id="form">
 	<gui:eventListeners rulesPackage="sob" dataModel="#{data.dossier}"	dialogData="#{data}" />
-	<p:panelGrid columns="2" cellpadding="10">
+	<p:panelGrid columns="2" cellpadding="10" >
 		<p:outputLabel value="Mandatory" for="mandatory" />
 		<p:inputText id="mandatory" value="#{data.dossier.mandatory}" />
 
