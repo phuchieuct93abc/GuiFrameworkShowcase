@@ -28,7 +28,8 @@
 	<h:outputStylesheet name="layouts/highlighter/shCore.css" />
 	<h:outputStylesheet name="layouts/highlighter/shThemeDefault.css" />
 		<h:outputStylesheet name="layouts/styles/styles.css" />
-	
+<!-- 		<h:outputStylesheet name="layouts/styles/menu.css" />
+ -->	
 	
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -38,13 +39,16 @@
 
 </h:head>
 <h:body>
+   <f:event type="preRenderView" listener="#{ivyPrimefacesThemeResolver.setSessionTheme('bootstrap')}"/>
+
 	<div class="navbar navbar-top">
 		<div class="container" id="headerdiv">
 
 			<div class="pull-right themeswitcher">
 				<h:form id="themeswitcher">
-					<h:panelGrid columns="2">
-						<!-- See Designer Documentation about Themes or the PublicAPI of IvyPrimefacesThemeResolver for more information -->
+				<!-- 	<h:panelGrid columns="2">
+					
+						See Designer Documentation about Themes or the PublicAPI of IvyPrimefacesThemeResolver for more information
 						<p:outputLabel value="Theme" />
 						<p:themeSwitcher id="basic"
 							value="#{ivyPrimefacesThemeResolver.sessionTheme}" style="width: 80px;">
@@ -52,7 +56,7 @@
 								var="theme" itemLabel="#{theme}" itemValue="#{theme}" />
 							<p:ajax />
 						</p:themeSwitcher>
-					</h:panelGrid>
+					</h:panelGrid> -->
 				</h:form>
 			</div>
 		</div>
