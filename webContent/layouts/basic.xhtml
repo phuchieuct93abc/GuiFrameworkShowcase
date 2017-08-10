@@ -44,32 +44,19 @@
 	<div class="navbar navbar-top">
 		<div class="container" id="headerdiv">
 
-			<div class="pull-right themeswitcher">
-				<h:form id="themeswitcher">
-				<!-- 	<h:panelGrid columns="2">
-					
-						See Designer Documentation about Themes or the PublicAPI of IvyPrimefacesThemeResolver for more information
-						<p:outputLabel value="Theme" />
-						<p:themeSwitcher id="basic"
-							value="#{ivyPrimefacesThemeResolver.sessionTheme}" style="width: 80px;">
-							<f:selectItems value="#{ivyPrimefacesThemeResolver.themes}"
-								var="theme" itemLabel="#{theme}" itemValue="#{theme}" />
-							<p:ajax />
-						</p:themeSwitcher>
-					</h:panelGrid> -->
-				</h:form>
-			</div>
+			<H2 class="text-center">GUI-FRAMEWORK SHOWCASES</H2>
 		</div>
 	</div>
 
 	<div class="container-fluid">
-		<div class="row flex">
-			<div class="left-layout hd-demo-nav">
+		<div class="row">
+		
+		<div class="col-lg-2  col-xs-3 hd-demo-nav">
 				<ui:insert name="menu">
 					<ui:include src="/layouts/includes/menu.xhtml" />
 				</ui:insert>
 			</div>
-			<div class="right-layout">
+			<div class="col-lg-10  col-xs-9">
 				<ui:decorate template="/layouts/includes/content.xhtml" />
 				
 				

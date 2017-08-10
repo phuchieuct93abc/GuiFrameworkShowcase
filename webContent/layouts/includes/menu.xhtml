@@ -8,39 +8,38 @@
 	xmlns:pm="http://primefaces.org/mobile">
 <body>
 	<ui:composition>
-
-
-<h:form>
-
+		<h:form>
 		<p:menu>
 
-			<p:menuitem value="Getting start"
-				styleClass="#{applicationContainer.isActive('GETTING_START') ? 'ui-state-active' : ''}"
-				url="#{applicationContainer.goShowcase('GETTING_START')}" 
-				/>
+				<p:menuitem value="Getting start"
+					styleClass="#{applicationContainer.isActive('GETTING_START') ? 'ui-state-active' : ''}"
+					action="#{applicationContainer.goShowcase('GETTING_START')}" />
 
 
-	 	<p:submenu label="Showcases">
-				<p:menuitem value="Basic component"
-					styleClass="#{applicationContainer.isActive('BASIC_COMPONENT') ? 'ui-state-active' : ''}"
-					url="#{applicationContainer.goShowcase('BASIC_COMPONENT')}" />
-				<p:menuitem value="Auto complete"
-					styleClass="#{applicationContainer.isActive('AUTO_COMPLETE') ? 'ui-state-active' : ''}"
-					url="#{applicationContainer.goShowcase('AUTO_COMPLETE')}" />
-			</p:submenu>
-			<p:submenu label="Usecases">
-				<p:menuitem value="Custom controller"
-					url="#{ivy.html.startref('ShowCaseProcesses/CustomController/start.ivp')}" />
-				<p:menuitem value="Component context"
-					url="#{ivy.html.startref('UseCaseProcesses/ComponentContext/start.ivp')}" />
+				<p:submenu label="SHOWCASES">
+					<p:menuitem value="Basic component"
+						styleClass="#{applicationContainer.isActive('BASIC_COMPONENT') ? 'ui-state-active' : ''}"
+						action="#{applicationContainer.goShowcase('BASIC_COMPONENT')}" />
+					<p:menuitem value="Auto complete"
+						styleClass="#{applicationContainer.isActive('AUTO_COMPLETE') ? 'ui-state-active' : ''}"
+						action="#{applicationContainer.goShowcase('AUTO_COMPLETE')}" />
+				</p:submenu>
+				<p:submenu label="USECASES">
+					<p:menuitem value="Custom controller"
+						styleClass="#{applicationContainer.isActive('CUSTOM_CONTROLLER') ? 'ui-state-active' : ''}"
+						action="#{applicationContainer.goShowcase('CUSTOM_CONTROLLER')}" />
+					<p:menuitem value="Component context"
+						styleClass="#{applicationContainer.isActive('COMPONENT_CONTEXT') ? 'ui-state-active' : ''}"
+						action="#{applicationContainer.goShowcase('COMPONENT_CONTEXT')}" />
 
-				<p:menuitem value="Validate button"
-					url="#{ivy.html.startref('UseCaseProcesses/ValidateButton/start.ivp')}" />
+					<p:menuitem value="Validate button"
+						styleClass="#{applicationContainer.isActive('VALIDATE_BUTTON') ? 'ui-state-active' : ''}"
+						action="#{applicationContainer.goShowcase('VALIDATE_BUTTON')}" />
 
 
-			</p:submenu>  
+				</p:submenu>
 
-		</p:menu>
+			</p:menu>			
 		</h:form>
 	</ui:composition>
 </body>
