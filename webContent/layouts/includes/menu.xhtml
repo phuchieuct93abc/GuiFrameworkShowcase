@@ -9,35 +9,11 @@
 <body>
 	<ui:composition>
 		<h:form>
-		<p:menu>
+						<h:graphicImage name="layouts/images/gears.gif"></h:graphicImage>
+		
+		<p:menu model="#{applicationContainer.menu}">
 
-				<p:menuitem value="Getting start"
-					styleClass="#{applicationContainer.isActive('GETTING_START') ? 'ui-state-active' : ''}"
-					action="#{applicationContainer.goShowcase('GETTING_START')}" />
-
-
-				<p:submenu label="SHOWCASES">
-					<p:menuitem value="Basic component"
-						styleClass="#{applicationContainer.isActive('BASIC_COMPONENT') ? 'ui-state-active' : ''}"
-						action="#{applicationContainer.goShowcase('BASIC_COMPONENT')}" />
-					<p:menuitem value="Auto complete"
-						styleClass="#{applicationContainer.isActive('AUTO_COMPLETE') ? 'ui-state-active' : ''}"
-						action="#{applicationContainer.goShowcase('AUTO_COMPLETE')}" />
-				</p:submenu>
-				<p:submenu label="USECASES">
-					<p:menuitem value="Custom controller"
-						styleClass="#{applicationContainer.isActive('CUSTOM_CONTROLLER') ? 'ui-state-active' : ''}"
-						action="#{applicationContainer.goShowcase('CUSTOM_CONTROLLER')}" />
-					<p:menuitem value="Component context"
-						styleClass="#{applicationContainer.isActive('COMPONENT_CONTEXT') ? 'ui-state-active' : ''}"
-						action="#{applicationContainer.goShowcase('COMPONENT_CONTEXT')}" />
-
-					<p:menuitem value="Validate button"
-						styleClass="#{applicationContainer.isActive('VALIDATE_BUTTON') ? 'ui-state-active' : ''}"
-						action="#{applicationContainer.goShowcase('VALIDATE_BUTTON')}" />
-
-
-				</p:submenu>
+				
 
 			</p:menu>			
 		</h:form>
