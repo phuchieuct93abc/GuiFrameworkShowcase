@@ -9,14 +9,20 @@
 <body>
 	<ui:composition>
 		<h:form>
-						<h:graphicImage name="layouts/images/gears.gif"></h:graphicImage>
-		
-		<p:menu model="#{applicationContainer.menu}">
+			<p:remoteCommand name="redirect"
+				actionListener="#{applicationContainer.redirect}" />
 
-				
+			<h:graphicImage name="layouts/images/gears.gif"></h:graphicImage>
 
-			</p:menu>			
+			<p:menu model="#{applicationContainer.menu}">
+
+
+
+			</p:menu>
 		</h:form>
+
+
+
 	</ui:composition>
 </body>
 </html>
