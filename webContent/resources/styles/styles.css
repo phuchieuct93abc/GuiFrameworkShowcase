@@ -1,0 +1,38 @@
+p {
+	white-space: pre-wrap;
+	font-size: 1.2em
+}
+
+p[class^=bg-] {
+	padding: 15px;
+}
+
+.syntaxhighlighter .toolbar {
+	display: none;
+}
+
+.getting-start {
+	font-size: 16px;
+}
+
+.left-layout {
+	width: 250px;
+}
+
+.right-layout {
+	flex: 1
+}
+
+
+.syntaxhighlighter {
+	overflow: visible !important;
+}
+
+.no-border.ui-panelgrid>*>tr, .no-border.ui-panelgrid>*>tr>td {
+	border: none;
+}
+
+.ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error{
+	color:red !important;
+	background-color: white !important;
+}
