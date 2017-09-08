@@ -36,7 +36,7 @@ public enum ShowCaseEnum {
 	}
 	public static List<ShowCaseEnum> getUsecaseMenus(){
 		
-		return Arrays.asList(CUSTOM_CONTROLLER,AUTO_COMPLETE,COMPONENT_CONTEXT);
+		return Arrays.asList(CUSTOM_CONTROLLER,COMPONENT_CONTEXT);
 
 		
 	}

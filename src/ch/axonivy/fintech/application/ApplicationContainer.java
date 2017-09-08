@@ -18,7 +18,6 @@ import org.primefaces.model.menu.MenuModel;
 
 import ch.ivyteam.ivy.environment.Ivy;
 
-
 @ManagedBean
 @SessionScoped
 public class ApplicationContainer {
@@ -26,6 +25,7 @@ public class ApplicationContainer {
 
 	public ApplicationContainer() {
 		Ivy.log().debug("constructor");
+		activeShowcase = ShowCaseEnum.GETTING_START;
 	}
 
 	public MenuModel getMenu() {
@@ -34,6 +34,8 @@ public class ApplicationContainer {
 		DefaultMenuItem gettingStarted = new DefaultMenuItem("Getting started");
 		gettingStarted.setOncomplete("redirect([{name:'menu', value:'"
 				+ ShowCaseEnum.GETTING_START + "'}])");
+		String activeClass = ShowCaseEnum.GETTING_START == activeShowcase ? "ui-state-active" : "";
+		gettingStarted.setContainerStyleClass(activeClass);
 
 		DefaultSubMenu componentMenus = getComponentSubMenu();
 		DefaultSubMenu useCaseMenus = getUsecaseSubMenu();
@@ -57,7 +59,7 @@ public class ApplicationContainer {
 
 	private DefaultSubMenu getUsecaseSubMenu() {
 		DefaultSubMenu componentSubMenu = new DefaultSubMenu("Use cases");
-		List<MenuElement> elements = ShowCaseEnum.getBasicCompomnentMenus()
+		List<MenuElement> elements = ShowCaseEnum.getUsecaseMenus()
 				.stream().map(this::generateMenuItem)
 				.collect(Collectors.toList());
 		componentSubMenu.setElements(elements);
@@ -66,23 +68,14 @@ public class ApplicationContainer {
 	}
 
 	private DefaultMenuItem generateMenuItem(ShowCaseEnum menu) {
-		Ivy.log().debug(menu);
-		String activeClass = menu == activeShowcase ? "ui-active-state" : "";
+		String activeClass = menu == activeShowcase ? "ui-state-active" : "";
 
 		DefaultMenuItem item = new DefaultMenuItem(menu.getName());
 		item.setOnclick("redirect([{name:'menu', value:'" + menu + "'}])");
-		Ivy.log().debug(activeClass);
-		item.setStyleClass("AAAAAA");
+		item.setContainerStyleClass(activeClass);
 		return item;
 
 	}
-
-
-
-
-
-
-
 
 	public void redirect() throws IOException {
 		Map<String, String> params = FacesContext.getCurrentInstance()
