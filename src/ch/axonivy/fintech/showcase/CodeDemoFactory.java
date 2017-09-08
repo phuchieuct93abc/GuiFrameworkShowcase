@@ -1,5 +1,7 @@
 package ch.axonivy.fintech.showcase;
 
+import org.apache.commons.io.FilenameUtils;
+
 public class CodeDemoFactory {
 	public static final String JAVA = "java";
 	public static final String RULE = "rule";
@@ -8,7 +10,8 @@ public class CodeDemoFactory {
 	private CodeDemoFactory() {
 	}
 
-	public static CodeDemo createCodeDemo(String type, String fileName, String path) {
+	public static CodeDemo createCodeDemo(String type, String fileName,
+			String path) {
 		String fileType = type;
 
 		if (type == RULE) {
@@ -25,5 +28,20 @@ public class CodeDemoFactory {
 		default:
 			return null;
 		}
+	}
+
+	public static AbstractCode create(String path) {
+		String fileExtension = FilenameUtils.getExtension(path);
+		switch (fileExtension) {
+		case "java":
+			return new JavaCode(path);
+		case "drl":
+			return new RuleCode(path);
+		case "xhtml":
+			return new ViewCode(path);
+		default:
+			return null;
+		}
+
 	}
 }
