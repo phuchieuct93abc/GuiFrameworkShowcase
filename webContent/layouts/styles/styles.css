@@ -35,7 +35,7 @@ p[class^=bg-] {
 	border: none;
 }
 
-.ui-state-active {
-	background-color: #0081c2 !important;
-	color: white !important;
+.ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error{
+	color:red !important;
+	background-color: white !important;
 }

@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Fri Aug 04 13:58:43 ICT 2017]
+[>Created: Fri Sep 08 10:51:42 ICT 2017]
 15DAB422A5CA2667 3.18 #module
 >Proto >Proto Collection #zClass
 Bs0 ValidateButtonProcess Big #zClass
@@ -83,8 +83,8 @@ ResourceLoader loader = new ResourceLoader();
 in.codes = new ArrayList();
 
 
-in.codes.add(CodeDemoFactory.createCodeDemo(CodeDemoFactory.RULE,"Rule","rules\\ContextBasedRules\\validateButton\\default.drl"));
-in.codes.add(CodeDemoFactory.createCodeDemo(CodeDemoFactory.XML,"View","src_hd\\ch\\axonivy\\fintech\\usecase\\ValidateButton\\ValidateButton.xhtml"));
+in.codes.add(CodeDemoFactory.create("rules/ContextBasedRules/validateButton/default.drl"));
+in.codes.add(CodeDemoFactory.create("src_hd/ch/axonivy/fintech/usecase/ValidateButton/ValidateButton.xhtml"));
 
 ' #txt
 Bs0 f6 type ch.axonivy.fintech.usecase.ValidateButton.ValidateButtonData #txt

@@ -8,11 +8,14 @@
 	xmlns:pm="http://primefaces.org/mobile">
 <body>
 	<ui:composition>
-		<h:form>
+		<h:form styleClass="menu-container">
 			<p:remoteCommand name="redirect"
 				actionListener="#{applicationContainer.redirect}" />
+			<div class="menu-icon-wrapper">
+				<h:graphicImage name="layouts/images/gears.gif"
+					styleClass="menu-icon" />
 
-			<h:graphicImage name="layouts/images/gears.gif"></h:graphicImage>
+			</div>
 
 			<p:menu model="#{applicationContainer.menu}">
 

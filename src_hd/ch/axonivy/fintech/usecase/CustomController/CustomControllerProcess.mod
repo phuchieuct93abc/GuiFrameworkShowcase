@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Fri Aug 04 13:58:35 ICT 2017]
+[>Created: Fri Sep 08 10:51:01 ICT 2017]
 15DAB2CB4A5884CD 3.18 #module
 >Proto >Proto Collection #zClass
 Bs0 CustomControllerProcess Big #zClass
@@ -82,8 +82,8 @@ in.codes = new ArrayList();
 
 
 
-in.codes.add(CodeDemoFactory.createCodeDemo(CodeDemoFactory.XML,"View","src_hd\\ch\\axonivy\\fintech\\usecase\\CustomController\\CustomController.xhtml"));
-in.codes.add(CodeDemoFactory.createCodeDemo(CodeDemoFactory.JAVA,"Controller","src\\ch\\axonivy\\fintech\\usecase\\CustomControllerController.java"));
+in.codes.add(CodeDemoFactory.create("src_hd/ch/axonivy/fintech/usecase/CustomController/CustomController.xhtml"));
+in.codes.add(CodeDemoFactory.create("src/ch/axonivy/fintech/usecase/CustomControllerController.java"));
 ' #txt
 Bs0 f6 type ch.axonivy.fintech.usecase.CustomController.CustomControllerData #txt
 Bs0 f6 200 42 112 44 0 -8 #rect

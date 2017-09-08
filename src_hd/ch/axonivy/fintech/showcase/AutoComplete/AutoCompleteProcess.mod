@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Wed Aug 02 17:18:56 ICT 2017]
+[>Created: Fri Sep 08 10:53:05 ICT 2017]
 15DA11100F51A3F8 3.18 #module
 >Proto >Proto Collection #zClass
 Bs0 AutoCompleteProcess Big #zClass
@@ -78,8 +78,8 @@ Bs0 f6 actionCode 'import ch.axonivy.fintech.showcase.CodeDemoFactory;
 import ch.axonivy.fintech.standard.core.locale.CountryDto;
 import ShowCaseProcesses.AutoCompleteData;
 import ch.axonivy.fintech.BasicComponentData;
-import ch.axonivy.fintech.showcase.ViewCodeDemo;
-import ch.axonivy.fintech.showcase.CodeDemo;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.nio.file.Paths;
@@ -95,8 +95,8 @@ ResourceLoader loader = new ResourceLoader();
 in.codes = new ArrayList();
 
 
-in.codes.add(CodeDemoFactory.createCodeDemo(CodeDemoFactory.JAVA,"Controller","src/ch/axonivy/fintech/showcase/AutoCompleteController.java"));
-in.codes.add(CodeDemoFactory.createCodeDemo(CodeDemoFactory.XML,"View","src_hd/ch/axonivy/fintech/showcase/AutoComplete/AutoComplete.xhtml"));
+in.codes.add(CodeDemoFactory.create("src/ch/axonivy/fintech/showcase/AutoCompleteController.java"));
+in.codes.add(CodeDemoFactory.create("src_hd/ch/axonivy/fintech/showcase/AutoComplete/AutoComplete.xhtml"));
 
 
 

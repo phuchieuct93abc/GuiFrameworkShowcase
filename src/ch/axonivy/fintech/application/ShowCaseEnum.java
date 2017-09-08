@@ -7,7 +7,7 @@ public enum ShowCaseEnum {
 
 	GETTING_START ("ShowCaseProcesses/GettingStart/start.ivp","Getting startted"),
 	BASIC_COMPONENT ( "ShowCaseProcesses/BasicComponent/start.ivp","Basic Component"),
-	AUTO_COMPLETE ( "ShowCaseProcesses/BasicComponent/start.ivp","Auto complete"),
+	AUTO_COMPLETE ( "ShowCaseProcesses/AutoComplete/start.ivp","Auto complete"),
 	VALIDATE_BUTTON ( "UseCaseProcesses/ValidateButton/start.ivp","Validate button"),
 	CUSTOM_CONTROLLER( "ShowCaseProcesses/CustomController/start.ivp","Custom controller"),
 	COMPONENT_CONTEXT( "UseCaseProcesses/ComponentContext/start.ivp","Component context");

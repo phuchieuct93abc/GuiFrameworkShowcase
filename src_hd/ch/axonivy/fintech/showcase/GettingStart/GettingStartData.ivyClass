@@ -2,5 +2,5 @@ GettingStartData #class
 ch.axonivy.fintech.showcase.GettingStart #namespace
 dossier ch.axonivy.fintech.AutoCompleteData #field
 dossier PERSISTENT #fieldModifier
-codes java.util.List<ch.axonivy.fintech.showcase.CodeDemo> #field
+codes List<ch.axonivy.fintech.showcase.AbstractCode> #field
 codes PERSISTENT #fieldModifier

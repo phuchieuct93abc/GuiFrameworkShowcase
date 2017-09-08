@@ -14,15 +14,19 @@
 		<h2>Live demo</h2>
 		<ui:insert name="liveDemo" />
 
+		<p:outputPanel rendered="#{data.codes.size() > 0}">
 
-		<h2>Code</h2>
-			<p:tabView value="#{data.codes}" var="code" rendered="#{data.codes.size() >=1}">
+			<h2>Code</h2>
+			<p:tabView value="#{data.codes}" var="code"
+				rendered="#{data.codes.size() >=1}">
 				<p:tab title="#{code.fileName}">
-						<pre class="brush: #{code.fileType}">#{code.fileContent}</pre> 
-					
+					<pre class="brush: #{code.fileType}">#{code.fileContent}</pre>
+
 				</p:tab>
 			</p:tabView>
-			
+		</p:outputPanel>
+
+
 
 	</ui:composition>
 </body>

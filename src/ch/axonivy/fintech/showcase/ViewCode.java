@@ -21,7 +21,6 @@ public class ViewCode extends AbstractCode {
 
 	@Override
 	public String getFileContent() throws IOException {
-		// TODO Auto-generated method stub
 		String content = super.getFileContent();
 		Matcher matcher = pattern.matcher(content);
 		matcher.find();

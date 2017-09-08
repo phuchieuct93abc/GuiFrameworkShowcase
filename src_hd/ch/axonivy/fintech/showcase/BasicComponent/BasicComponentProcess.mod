@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Fri Sep 08 08:57:07 ICT 2017]
+[>Created: Fri Sep 08 10:52:58 ICT 2017]
 15D7DC0403CA44B1 3.18 #module
 >Proto >Proto Collection #zClass
 Bs0 BasicComponentProcess Big #zClass
@@ -52,8 +52,8 @@ Bs0 f6 actionTable 'out=in;
 ' #txt
 Bs0 f6 actionCode 'import ch.axonivy.fintech.showcase.CodeDemoFactory;
 import ch.axonivy.fintech.BasicComponentData;
-import ch.axonivy.fintech.showcase.ViewCodeDemo;
-import ch.axonivy.fintech.showcase.CodeDemo;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.nio.file.Paths;
